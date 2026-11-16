@@ -77,7 +77,7 @@ def main():
         sys.exit(1)
 
     print(f"源文件：{INPUT_FILE}（共 {total} 页）")
-    print(f"将提取第 {indexes + 1} 页，共 {len(indexes)} 页")
+    print(f"将提取第 {[i + 1 for i in indexes]} 页，共 {len(indexes)} 页")
     print(f"输出到：{os.path.abspath(OUTPUT_FILE)}")
 
     answer = input("确认执行？(y/n)：").strip().lower()
