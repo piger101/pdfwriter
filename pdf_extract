@@ -12,6 +12,7 @@ PAGE_RANGE_TEXT = input(
 def parse_page_range(text: str, total_pages: int) -> list[int]:
     selected = set()
 
+    text = re.sub(r"\s*-\s*", "-", text)
     for part in re.split(r"[,，、\s]+", text.strip()):
         if not part:
             continue
